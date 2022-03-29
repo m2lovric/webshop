@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../components/layout';
 import Image from 'next/image';
+import Button from '../components/Button';
 
 const Home: NextPage = () => {
   return (
@@ -19,10 +20,13 @@ const Home: NextPage = () => {
           <h2 className='font-extrabold text-4xl mt-16 w-3/12'>
             RUN WITH ULTRABOOST 22
           </h2>
-          <p className='font-light mt-2 w-4/12'>
+          <p className='font-light my-3 w-4/12'>
             Supreme energy return meets 360° fit improvement. Own your energy
             and achieve your impossible in the Ultraboost 22 running shoe.
           </p>
+          <Button text='Shop women' />
+          <Button text='Shop men' />
+          <Button text='Shop kids' />
         </section>
       </Layout>
     </div>
