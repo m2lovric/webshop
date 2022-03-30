@@ -33,13 +33,13 @@ const Header = () => {
           <a className='font-extralight'>3 Stripe Life</a>
         </Link>
       </section>
-      <section className='flex items-center justify-between w-2/12'>
+      <section className='flex items-center justify-between w-3/12'>
         <input
           type='search'
           name=''
           id=''
           placeholder='Search'
-          className='w-5/12'
+          className='w-8/12 bg-slate-200 font-extralight text-black px-2 mr-6 '
         />
         <Link href='/'>
           <a className='w-2/12'>
