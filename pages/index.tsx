@@ -3,8 +3,25 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import Image from 'next/image';
 import Button from '../components/Button';
+import { useEffect, useState } from 'react';
+import { createClient } from 'contentful';
 
 const Home: NextPage = () => {
+  const [products, setProducts] = useState<any[]>();
+
+  const client = createClient({
+    space: process.env.NEXT_PUBLIC_SPACE!,
+    accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN!,
+  });
+
+  useEffect(() => {
+    client.getEntries().then((res) => {
+      console.log(res.items);
+      setProducts(res.items);
+      console.log(products);
+    });
+  }, []);
+
   return (
     <div className='flex flex-col items-center'>
       <Head>
@@ -27,6 +44,12 @@ const Home: NextPage = () => {
           <Button text='Shop women' />
           <Button text='Shop men' />
           <Button text='Shop kids' />
+        </section>
+        <section className=' flex justify-between '>
+          {products &&
+            products.map((el) => {
+              return <p key={el.fields.id}>{el.fields.title}</p>;
+            })}
         </section>
       </Layout>
     </div>
