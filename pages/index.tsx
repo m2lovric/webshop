@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Button from '../components/Button';
 import { useEffect, useState } from 'react';
 import { createClient } from 'contentful';
+import Product from '../components/Product';
 
 const Home: NextPage = () => {
   const [products, setProducts] = useState<any[]>();
@@ -16,7 +17,6 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     client.getEntries().then((res) => {
-      console.log(res.items);
       setProducts(res.items);
       console.log(products);
     });
@@ -45,11 +45,16 @@ const Home: NextPage = () => {
           <Button text='Shop men' />
           <Button text='Shop kids' />
         </section>
-        <section className=' flex justify-between '>
-          {products &&
-            products.map((el) => {
-              return <p key={el.fields.id}>{el.fields.title}</p>;
-            })}
+        <section className=' flex flex-col justify-between py-40 px-16 '>
+          <h2 className=' italic font-bold text-4xl mb-16 tracking-tighter'>
+            STILL INTERESTED?
+          </h2>
+          <section>
+            {products &&
+              products.map((el) => {
+                return <Product key={el.fields.id} data={el.fields} />;
+              })}
+          </section>
         </section>
       </Layout>
     </div>
