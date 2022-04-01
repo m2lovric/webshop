@@ -45,16 +45,80 @@ const Home: NextPage = () => {
           <Button text='Shop men' />
           <Button text='Shop kids' />
         </section>
-        <section className=' flex flex-col justify-between py-40 px-16 '>
-          <h2 className=' italic font-bold text-4xl mb-16 tracking-tighter'>
+        <section className=' flex flex-col justify-between py-40 '>
+          <h2 className=' italic font-bold text-4xl mb-16 tracking-tighter px-16'>
             STILL INTERESTED?
           </h2>
-          <section>
+          <section className='flex justify-start overflow-hidden'>
             {products &&
               products.map((el) => {
                 return <Product key={el.fields.id} data={el.fields} />;
               })}
           </section>
+        </section>
+        <section className='w-full mx-auto bg-slate-100 flex px-60 py-32 justify-between'>
+          <article className='w-6/12 flex-col mr-4'>
+            <h4 className='mb-5 font-semibold text-sm'>
+              STORIES, STYLE, AND SPORTING GOODS AT ADIDAS, SINCE 1949
+            </h4>
+            <p className=' font-light text-xs '>
+              Through sports, we have the power to change lives. Sports keep us
+              fit. They keep us mindful. They bring us together. Athletes
+              inspire us. They help us to get up and get moving. And sporting
+              goods featuring the latest technologies help us beat our personal
+              best. adidas is home to the runner, the basketball player, the
+              soccer kid, the fitness enthusiast, the yogi. And even the weekend
+              hiker looking to escape the city. The 3-Stripes are everywhere and
+              anywhere. In sports. In music. On life’s stages. Before the
+              whistle blows, during the race, and at the finish line. We’re here
+              to support creators. To improve their game. To live their lives.
+              And to change the world.
+              <br />
+              <br /> adidas is about more than sportswear and workout clothes.
+              We partner with the best in the industry to co-create. This way we
+              offer our fans the sporting goods, style and clothing that match
+              the athletic needs, while keeping sustainability in mind. We’re
+              here to support creators. Improve their game. Create change. And
+              we think about the impact we have on our world.
+            </p>
+          </article>
+          <article className='w-6/12 flex-col ml-4'>
+            <h4 className='mb-5 font-semibold text-sm '>
+              WORKOUT CLOTHES, FOR ANY SPORT
+            </h4>
+            <p className=' font-light text-xs '>
+              Adidas designs for athletes of all kinds. Creators who love to
+              change the game. People who challenge conventions, break the
+              rules, and define new ones. Then break them all over again. We
+              design sports apparel that gets you moving, winning, and living
+              life to the fullest. We create bras and tights for female athletes
+              who play just as hard as the men. From low to high support.
+              Maximum comfort. We design, innovate and iterate. We test new
+              technologies in action. On the field, the track, the court, and in
+              the pool. We’re inspired by retro workout clothes, creating new
+              streetwear essentials. From NMD and Ozweego to our Firebird
+              tracksuits. From Stan Smith to Superstar. Classic sports models
+              are brought back to life on the streets and the stages around the
+              world.
+              <br />
+              <br /> Through our collections we blur the borders between high
+              fashion and high performance. Like our adidas by Stella McCartney
+              athletic clothing collection – designed to look the part inside
+              and outside of the gym. Or some of our adidas Originals lifestyle
+              pieces, that can be worn as sports apparel too. Our lives are
+              constantly changing. Becoming more and more versatile. And adidas
+              designs with that in mind.
+            </p>
+          </article>
+        </section>
+
+        <section className=' bg-yellow-300 flex items-center justify-center py-24'>
+          <article className='w-1/2 flex items-center justify-between'>
+            <h2 className=' font-bold text-3xl'>
+              JOIN OUR ADICLUB & GET 15% OFF
+            </h2>
+            <Button text='SIGN UP FOR FREE' />
+          </article>
         </section>
       </Layout>
     </div>
