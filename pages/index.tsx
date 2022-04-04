@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       </Head>
       <Layout>
         <section
-          className="h-[600px] flex flex-col w-full bg-cover p-16
+          className="h-[600px] 2xl:bg-center flex flex-col w-full bg-cover p-16
         bg-[url('/running-ss22-ultraboost-educate-catlp-masthead-large-2-d_tcm221-860848.webp')]"
         >
           <h2 className='font-extrabold text-4xl mt-16 w-3/12'>
