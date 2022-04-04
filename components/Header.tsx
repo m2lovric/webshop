@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 const Header = () => {
+  const [checkout, setCheckout] = useState();
   return (
-    <header className='flex items-center justify-between w-10/12 h-20 '>
+    <header className='flex items-center justify-between w-10/12 h-20 relative '>
       <Link href='/'>
         <a className='w-2/12'>
           <Image
@@ -51,11 +52,23 @@ const Header = () => {
             <Image src='/love.png' alt='logo' width='20px' height='20px' />
           </a>
         </Link>
-        <Link href='/'>
-          <a className='w-2/12'>
-            <Image src='/bag.png' alt='logo' width='20px' height='20px' />
-          </a>
-        </Link>
+        <section className=' group'>
+          <Link href='/'>
+            <a className='w-2/12'>
+              <Image src='/bag.png' alt='logo' width='20px' height='20px' />
+            </a>
+          </Link>
+          <section
+            className=' hidden group-hover:flex absolute -bottom-6 
+            -right-14 w-72 h-14 bg-white justify-center items-center '
+          >
+            {checkout ? (
+              <div></div>
+            ) : (
+              <h3 className=' uppercase font-bold'>your bag is empty</h3>
+            )}
+          </section>
+        </section>
       </section>
     </header>
   );
