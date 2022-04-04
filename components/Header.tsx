@@ -62,7 +62,7 @@ const Header = () => {
             className=' hidden group-hover:flex absolute -bottom-6 
             -right-14 w-72 h-14 bg-white justify-center items-center '
           >
-            {checkout ? (
+            {checkout.length > 0 ? (
               <div></div>
             ) : (
               <h3 className=' uppercase font-bold'>your bag is empty</h3>
