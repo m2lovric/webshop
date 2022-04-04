@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 const Header = () => {
-  const [checkout, setCheckout] = useState();
+  const [checkout, setCheckout] = useState([]);
   return (
     <header className='flex items-center justify-between w-10/12 h-20 relative '>
       <Link href='/'>
