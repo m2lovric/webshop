@@ -12,7 +12,10 @@ const Product = ({ data }: ProductProps) => {
         alt='running sneakers'
         className=' w-[350px] h-[350px] 2xl:w-[450px] 2xl:h-[450px] box-border'
       />
-      <div className=' font-light text-sm absolute top-[322px] left-3 group-hover:top-[314px] py-1 px-2 bg-white'>
+      <div
+        className=' font-light text-sm absolute top-[322px] left-3 group-hover:top-[314px] 
+      py-1 px-2 bg-white 2xl:top-[422px] 2xl:group-hover:top-[414px]'
+      >
         {data.price}$
       </div>
       <p className=' font-light text-sm'>{data.title}</p>
